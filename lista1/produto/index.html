@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-br">
+   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ensino de pensamento computacional desplugado</title>
+  </head>
+
+    <nav>
+      <ul>
+        <li><a href="#apresentacao">Apresentação</a></li>
+        <li><a href="#funcionamento">Como Funciona</a></li>
+        <li><a href="#etapas">Etapas de Desenvolvimento</a></li>
+        <li><a href="#componentes">Componentes do Ecossistema</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <h1>Plataforma Tátil de Ensino de Pensamento Computacional</h1>
+
+    <h2 id="apresentacao">Apresentação do Projeto</h2>
+    <p>
+      Atualmente, atuo no desenvolvimento de um ecossistema educacional focado no ensino de 
+      pensamento computacional e lógica de programação de forma <strong>desplugada</strong> para a educação básica. 
+      Nossa proposta elimina a dependência de telas no ambiente escolar, substituindo monitores por uma interface física baseada em 
+      <strong>blocos impressos em 3D</strong> contendo etiquetas com códigos de barras. Essa abordagem transforma o aprendizado em 
+      uma experiência tátil, lúdica e acessível.
+    </p>
+    <p>
+      Ao permitir que os estudantes manipulem diretamente os conceitos abstratos da tecnologia através da montagem livre de blocos, 
+      buscamos cultivar o <strong>raciocínio lógico</strong>, a criatividade e o trabalho em equipe de maneira natural. 
+      O principal objetivo pedagógico é apresentar a estrutura fundamental de um algoritmo e suas instruções essenciais — tais como estruturas condicionais 
+      <em>SE</em> <small>(IF)</small>, laços de repetição <em>PARA</em> <small>(FOR)</small> e <em>ENQUANTO</em> <small>(WHILE)</small>, e rotinas de entrada e saída.
+    </p>
+
+    <h2 id="funcionamento">Como Funciona o Ecossistema</h2>
+    <p>
+      O sistema funciona através do alinhamento preciso entre hardware e software. As crianças organizam a sequência de blocos no chão ou em uma mesa. 
+      Em seguida, realizam a leitura individual dos códigos de barras utilizando um leitor sem fio. Um software embarcado em um 
+      <strong>Raspberry Pi 4</strong> processa, valida a sintaxe dos comandos e interpreta a lógica desenvolvida pelo aluno.
+    </p>
+    <p>
+      Após a validação do algoritmo, o Raspberry Pi envia as instruções via <em>Bluetooth</em> para um <strong>carrinho robótico controlado por Arduino</strong>. 
+      O veículo então executa os movimentos no espaço físico, oferecendo aos estudantes um <em>feedback visual e prático imediato</em> sobre o resultado do programa montado, 
+      estimulando a autonomia e o aprendizado por meio de tentativa e erro.
+    </p>
+
+    <h2 id="etapas">Etapas do Desenvolvimento</h2>
+    <p>A construção do ecossistema segue uma cronologia estruturada para garantir a estabilidade do sistema pedagógico:</p>
+    
+    <ol>
+      <li>
+        <h3>Construção e Automação da Mídia Física</h3>
+        <p>Montagem e calibração do carrinho controlado por Arduino e módulo Bluetooth HC-05 para recepção dos comandos.</p>
+      </li>
+      <li>
+        <h3>Desenvolvimento do Interpretador Embarcado</h3>
+        <p>Criação do software em C++ executado na placa Raspberry Pi 4 para validação de erros e leitura dos blocos.</p>
+      </li>
+      <li>
+        <h3>Modelagem e Impressão 3D dos Blocos</h3>
+        <p>Modelagem dos blocos de programação físicos e aplicação das etiquetas de código de barras identificadoras.</p>
+      </li>
+      <li>
+        <h3>Implementação das Estruturas Lógicas Avançadas</h3>
+        <p>Inclusão gradual de estruturas de repetição (PARA/ENQUANTO) e condicionais (SE) no interpretador.</p>
+      </li>
+      <li>
+        <h3>Expansão Sensorial com Visão Computacional</h3>
+        <p>Aprimoramento futuro substituindo o leitor de código de barras por uma câmera e inteligência artificial para leitura instantânea dos blocos.</p>
+      </li>
+    </ol>
+
+    <h2 id="componentes">Componentes do Ecossistema</h2>
+    
+    <p>O ecossistema é formado pelos seguintes elementos principais:</p>
+    <ul>
+      <li>Carrinho robótico interativo motorizado com controle Arduino;</li>
+      <li>Módulo central de processamento e validação alimentado por Raspberry Pi 4;</li>
+      <li>Conjunto de blocos modulares impressos em 3D com códigos de barras;</li>
+      <li>Leitor sem fio para digitalização e transmissão dos dados.</li>
+    </ul>
+
+    <h3>Especificação dos Hardware Utilizados</h3>
+    <dl>
+      <dt><strong>Arduino UNO</strong></dt>
+      <dd>Microcontrolador encarregado pela acionamento dos motores e recepção dos comandos via Bluetooth.</dd>
+
+      <dt><strong>Raspberry Pi 4</strong></dt>
+      <dd>Computador de bordo responsável por interpretar o algoritmo montado nos blocos e checar erros lógicos.</dd>
+
+      <dt><strong>Módulo Bluetooth HC-05</strong></dt>
+      <dd>Dispositivo de comunicação sem fio entre a placa de processamento e o carrinho.</dd>
+    </dl>
+
+    <hr />
+
+    <h2 id="contato">Referências e Contato</h2>
+    
+     <p>
+      Fonte de referência:
+      <a href="https://mecred.mec.gov.br/colecao/16675" target="_blank">
+        Saiba mais sobre Computação Desplugada
+      </a>
+    </p>
+
+    <p>
+      Projeto desenvolvido no Laboratório de Robótica do IF Goiano Campus Ceres.
+    </p>
+    <p>
+      Dúvidas ou sugestões? Entre em contato com o responsável: 
+      <a href="mailto:heitor.souza@estudante.ifgoiano.edu.br">
+        heitor.souza@estudante.ifgoiano.edu.br
+      </a>
+    </p>
+
+  </body>
+</html>
