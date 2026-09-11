@@ -1,0 +1,226 @@
+html<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroVale Cooperativa</title>
+  </head>
+  <body>
+    <img src="imgs/logo.png" alt="Divulgação da agrovale" width="250" />
+
+    <h1>AgroVale Cooperativa</h1>
+    <ul>
+      <li><a href="#Sobre">Home</a></li>
+      <li><a href="#Produção">Produtos</a></li>
+      <li><a href="#Contato">Contato</a></li>
+    </ul>
+
+    <h2 id="Sobre">Sobre</h2>
+    <p>
+      A AgroVale Cooperativa é uma Cooperativa muito relevante no Vale do São
+      Patrício. Por produtores rurais na região de Ceres e Rialma, no Cerrado
+      goiano.
+    </p>
+
+    <p>
+      Reunimos mais de 340 cooperados in 18 municípios, com foco na produção de
+      grãos e no fortalecimento da agricultura familiar e empresarial do Vale.
+    </p>
+
+    <h2 id="Produção">Produtos</h2>
+    <p>Números da safra 2024/2025:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Cultura</th>
+          <th>Área (alqueires)</th>
+          <th>Produção (Sacas)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Soja</td>
+          <td>1250</td>
+          <td>5000</td>
+        </tr>
+        <tr>
+          <td>Milho</td>
+          <td>1250</td>
+          <td>4300</td>
+        </tr>
+        <tr>
+          <td>Sorgo</td>
+          <td>450</td>
+          <td>1000</td>
+        </tr>
+        <tr>
+          <!-- Correção: Girassol -->
+          <td>Girassol</td>
+          <td>200</td>
+          <td>800</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="Contato">Contato</h2>
+    <a href="mailto:contato@agrovale.coop.br">contato@agrovale.coop.br</a>
+
+    <!-- FORMULÁRIO 1: CONTATO (IDs alterados para ct-...) -->
+    <form action="#" method="post" id="FORM-X">
+      <fieldset>
+        <legend>Formulário de contato</legend>
+
+        <label for="ct-NomeCompleto">Nome Completo</label>
+        <input
+          type="text"
+          id="ct-NomeCompleto"
+          name="ct-nome"
+          placeholder="EX: Heitor de Souza Oliveira"
+          required
+        />
+        <br /><br />
+
+        <label for="ct-email">E-mail</label>
+        <input
+          type="email"
+          id="ct-email"
+          name="ct-email"
+          placeholder="EX: heitor@gmail.com"
+          required
+        />
+        <br /><br />
+
+        <!-- Correção: id corrigido para ct-telefone -->
+        <label for="ct-telefone">Telefone</label>
+        <input
+          type="tel"
+          id="ct-telefone"
+          name="ct-telefone"
+          placeholder="EX: 62999999999"
+        />
+        <br /><br />
+
+        <label for="ct-msg">Mensagem</label>
+        <!-- Correção: Removido o </textarea> duplicado -->
+        <textarea
+          name="ct-msg"
+          id="ct-msg"
+          rows="3"
+          placeholder="Escreva sua mensagem aqui"
+          required
+        ></textarea>
+        <br /><br />
+      </fieldset>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Pré-cadastro</h2>
+    <!-- FORMULÁRIO 2: PRÉ-CADASTRO (IDs alterados para pc-...) -->
+    <form action="#" method="post" id="Precadastro-Coperado">
+      <fieldset>
+        <!-- Correção: Ortografia de Proprietário -->
+        <legend>Dados do Proprietário</legend>
+        <label for="pc-NomeCompleto">Nome Completo</label>
+        <input
+          type="text"
+          id="pc-NomeCompleto"
+          name="pc-nome"
+          placeholder="EX: Heitor de Souza Oliveira"
+          required
+          minlength="3"
+          maxlength="100"
+        />
+        <br /><br />
+
+        <label for="pc-cpf">CPF:</label>
+        <input
+          type="text"
+          name="pc-cpf"
+          id="pc-cpf"
+          placeholder="000.000.000-00"
+          required
+          pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+        />
+        <br />
+        <br />
+
+        <label for="pc-email">E-mail</label>
+        <input
+          type="email"
+          id="pc-email"
+          name="pc-email"
+          placeholder="EX: heitor@gmail.com"
+          required
+        />
+        <br /><br />
+      </fieldset>
+
+      <fieldset>
+        <!-- Correção: Ortografia de Propriedade -->
+        <legend>Dados da Propriedade</legend>
+
+        <!-- Correção: Ortografia de município -->
+        <label for="pc-municipio">Município</label>
+        <select id="pc-municipio" name="pc-municipio">
+          <option selected disabled value="">--- Selecione ---</option>
+          <!-- Correção: Removido o caractere '<' do value -->
+          <option value="Ceres">Ceres</option>
+          <option value="Rialma">Rialma</option>
+          <option value="Jaraguá">Jaraguá</option>
+        </select>
+        <br /><br />
+
+        <!-- Correção: Mudado para tipo number e id ajustado -->
+        <label for="pc-area-propriedade">Área Propriedade (ha)</label>
+        <input
+          type="number"
+          id="pc-area-propriedade"
+          name="pc-area"
+          placeholder="000"
+        /><br /><br />
+
+        <label>Culturas Produzidas:</label><br />
+        <!-- Dica: Envolver os checkboxes com a própria label melhora o clique na tela -->
+        <label
+          ><input type="checkbox" name="pc-cultura[]" value="Soja" />
+          Soja</label
+        >
+        <label
+          ><input type="checkbox" name="pc-cultura[]" value="Milho" />
+          Milho</label
+        >
+        <label
+          ><input type="checkbox" name="pc-cultura[]" value="Arroz" />
+          Arroz</label
+        >
+        <label
+          ><input type="checkbox" name="pc-cultura[]" value="Feijão" />
+          Feijão</label
+        >
+        <label
+          ><input type="checkbox" name="pc-cultura[]" value="Algodão" />
+          Algodão</label
+        >
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferência de contato:</legend>
+        <label
+          ><input type="radio" name="pc-preferencia-contato" value="Whatsapp" />
+          Whatsapp</label
+        >
+        <label
+          ><input type="radio" name="pc-preferencia-contato" value="E-mail" />
+          E-mail</label
+        >
+        <label
+          ><input type="radio" name="pc-preferencia-contato" value="Telefone" />
+          Telefone</label
+        >
+      </fieldset>
+
+      <button type="submit">Enviar cadastro</button>
+    </form>
+  </body>
+</html>
